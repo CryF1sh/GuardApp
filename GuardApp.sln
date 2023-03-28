@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardApp", "GuardApp\GuardApp.csproj", "{6E308D24-1EF9-41A9-8687-533E269D009F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E308D24-1EF9-41A9-8687-533E269D009F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E308D24-1EF9-41A9-8687-533E269D009F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E308D24-1EF9-41A9-8687-533E269D009F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E308D24-1EF9-41A9-8687-533E269D009F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {991F196C-66F8-4D15-AF8F-FB9F00CA9060}
+	EndGlobalSection
+EndGlobal

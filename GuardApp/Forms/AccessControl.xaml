@@ -1,0 +1,39 @@
+﻿<Window x:Class="GuardApp.AccessControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GuardApp"
+        mc:Ignorable="d"
+        Title="Стражник - Управление доступом" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <TextBlock Text="Фамилия" Style="{StaticResource textStyle}"></TextBlock>
+            <TextBlock Text="Имя" Style="{StaticResource textStyle}"></TextBlock>
+            <TextBlock Text="Отчество" Style="{StaticResource textStyle}"></TextBlock>
+            <TextBlock Text="Пол" Style="{StaticResource textStyle}"></TextBlock>
+            <TextBlock Text="Должность" Style="{StaticResource textStyle}"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
+            <TextBox Text="{Binding SurName}" x:Name="textSurName" Style="{StaticResource textboxStyle}" ></TextBox>
+            <TextBox Text="{Binding Name}" x:Name="textName" Style="{StaticResource textboxStyle}"></TextBox>
+            <TextBox Text="{Binding Patronymic}" x:Name="textPatronymic" Style="{StaticResource textboxStyle}"></TextBox>
+            <ComboBox SelectedItem="{Binding Gender}" DisplayMemberPath="NameGender" x:Name="cmbGender" Style="{StaticResource ComboBoxStyle}" Width="100" HorizontalAlignment="Left"></ComboBox>
+            <TextBox Text="{Binding Post}" x:Name="textPost" Style="{StaticResource textboxStyle}"></TextBox>
+        </StackPanel>
+        <Button x:Name="butSave" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="5" Width="100" Click="butSave_Click">Сохранить</Button>
+        <Button x:Name="butClear" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" Margin="5" Width="100" Click="butClear_Click">Отменить</Button>
+        <TextBlock HorizontalAlignment="Right" Text="Фамилия И. О." Name="tblSotrudnik" VerticalAlignment="Center" FontSize="20" Margin="10" Grid.Column="2"></TextBlock>
+        <Button x:Name="UploadPhoto" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="40" Margin="10">Загрузить фото</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="GuardApp.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GuardApp"
+        mc:Ignorable="d"
+        Title="Стражник - Вход" Height="400" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center" Margin="15,20">
+            <TextBlock Text="Тип пользователя" Style="{StaticResource textStyle}"></TextBlock>
+            <TextBlock Text="Логин" Style="{StaticResource textStyle}"></TextBlock>
+            <TextBlock Text="Пароль" Style="{StaticResource textStyle}"></TextBlock>
+            <TextBlock Text="Секретное слово" Style="{StaticResource textStyle}"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="15,20">
+            <ComboBox x:Name="CBTypeUser" Style="{StaticResource ComboBoxStyle}" DisplayMemberPath="NameType"></ComboBox>
+            <TextBox x:Name="textLogin" Style="{StaticResource textboxStyle}">Введите логин</TextBox>
+            <TextBox x:Name="textPassword" Style="{StaticResource textboxStyle}">Введите пароль</TextBox>
+            <TextBox x:Name="SecretWord" Style="{StaticResource textboxStyle}">Введите секретное слово</TextBox>
+        </StackPanel>
+        <Button x:Name="ButtonLogin" Grid.ColumnSpan="2" Grid.Row="1" Margin="5" Width="175" Click="ButtonLogin_Click">Войти в систему</Button>
+        <TextBlock x:Name="ForgottenData" Margin="5" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Center" >
+            <Hyperlink NavigateUri="">Забыли данные для входа</Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>
