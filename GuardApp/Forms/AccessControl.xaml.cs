@@ -61,6 +61,7 @@ namespace GuardApp
             else
             {
                 MessageBox.Show("Данные были добавлены!");
+                _currentUser.ApprovalStatus = false;
                 GuardianEntities.GetContext().Users.Add(_currentUser);
                 GuardianEntities.GetContext().SaveChanges();
                 ClearText();
@@ -71,7 +72,7 @@ namespace GuardApp
         {
             _count++;
 
-            if (_count == 360) // Блокировка окна после 5 минут
+            if (_count == 300) // Блокировка окна после 5 минут
             {
                 _timer.Stop(); // Остановка таймера
                 textSurName.IsReadOnly = false;

@@ -25,6 +25,10 @@ namespace GuardApp
         public int GenderCode { get; set; }
         public string Post { get; set; }
         public byte[] UserImage { get; set; }
+        public Nullable<bool> ApprovalStatus { get; set; }
+        public Nullable<bool> AddData { get; set; }
+        public Nullable<bool> ViewData { get; set; }
+        public Nullable<bool> ReportGeneration { get; set; }
     
         public virtual Gender Gender { get; set; }
         public virtual TypeUser TypeUser { get; set; }

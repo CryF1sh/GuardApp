@@ -1,0 +1,48 @@
+﻿<Window x:Class="GuardApp.Forms.VerificationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GuardApp.Forms"
+        mc:Ignorable="d"
+        Title="VerificationWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Right" x:Name="tblSotrudnik">Фамилия И. О.</TextBlock>
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Верификация</TextBlock>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <DataGrid Margin="30" x:Name="DGVer" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Фамилия" Binding="{Binding SurName}" Width="*" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Имя" Binding="{Binding Name}" Width="*" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}" Width="*" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Должность" Binding="{Binding Post}" Width="*" IsReadOnly="True"/>
+                                <DataGridComboBoxColumn Header="Тип" SelectedValueBinding="{Binding Type}" DisplayMemberPath="NameType" Width="*" x:Name="CbxType"/>
+                                <DataGridTextColumn Header="Логин" Binding="{Binding Login}" Width="*"/>
+                                <DataGridTextColumn Header="Пароль" Binding="{Binding Password}" Width="*"/>
+                                <DataGridTextColumn Header="Секретное слово" Binding="{Binding SecretWord}" Width="*"/>
+                                <DataGridCheckBoxColumn x:Name="ChkBox" Header="Одобрить" Binding="{Binding ApprovalStatus}" Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Button x:Name="BtnApproval" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="BtnApproval_Click">Одобрить</Button>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Мандаты доступа</TextBlock>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <DataGrid Margin="30">
+                        
+                    </DataGrid>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+        
+    </Grid>
+</Window>

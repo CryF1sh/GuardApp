@@ -34,6 +34,10 @@
           <Property Name="GenderCode" Type="int" Nullable="false" />
           <Property Name="Post" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="UserImage" Type="varbinary(max)" />
+          <Property Name="ApprovalStatus" Type="bit" />
+          <Property Name="AddData" Type="bit" />
+          <Property Name="ViewData" Type="bit" />
+          <Property Name="ReportGeneration" Type="bit" />
         </EntityType>
         <Association Name="FK_User_Gender">
           <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
@@ -108,6 +112,10 @@
           <Property Name="GenderCode" Type="Int32" Nullable="false" />
           <Property Name="Post" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="UserImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ApprovalStatus" Type="Boolean" />
+          <Property Name="AddData" Type="Boolean" />
+          <Property Name="ViewData" Type="Boolean" />
+          <Property Name="ReportGeneration" Type="Boolean" />
           <NavigationProperty Name="Gender" Relationship="Self.FK_User_Gender" FromRole="User" ToRole="Gender" />
           <NavigationProperty Name="TypeUser" Relationship="Self.FK_User_TypeUser" FromRole="User" ToRole="TypeUser" />
         </EntityType>
@@ -184,6 +192,10 @@
                 <ScalarProperty Name="GenderCode" ColumnName="GenderCode" />
                 <ScalarProperty Name="Post" ColumnName="Post" />
                 <ScalarProperty Name="UserImage" ColumnName="UserImage" />
+                <ScalarProperty Name="ApprovalStatus" ColumnName="ApprovalStatus" />
+                <ScalarProperty Name="AddData" ColumnName="AddData" />
+                <ScalarProperty Name="ViewData" ColumnName="ViewData" />
+                <ScalarProperty Name="ReportGeneration" ColumnName="ReportGeneration" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
